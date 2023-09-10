@@ -1,3 +1,3 @@
 # duoanni
 
-test ty kokto
+retardovany plugin fakt
