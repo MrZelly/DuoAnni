@@ -1,6 +1,6 @@
 # DuoAnni by Zelly
 
-#### TODO:
+## TODO:
 přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit)
 ~nově se budou bossové spawnovat každých 5 minut~
 
