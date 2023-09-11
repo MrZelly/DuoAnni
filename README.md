@@ -4,7 +4,7 @@
 přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit) <br>
 od 90. minuty se zničí 1 život na enemy nexusu za každý kill a na obou nexusech 1 život každou minutu  <br>
 
-## Update v1.1:
+## Update v1.1.1:
 #### Gameplay:
 nově se budou bossové spawnovat každých 5 minut <br>
 
@@ -38,6 +38,7 @@ Boss IV. (20. minuta) = Dia Helmet, Dia Chestplate, Dia Leggings, Dia Boots, Inf
 Boss V. - KONEC HRY (25. - KONEC HRY) = Stále to stejné <br>
 
 #### Items:
+(fixed)
 SPECIAL ABILITIES ON BOSS ITEMS <br>
 Dia Helmet => snižuje damage z luku o 100% ? <br>
 Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2 sekundy ? <br>

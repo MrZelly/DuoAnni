@@ -38,17 +38,19 @@ public class Shop implements Listener {
    public void onSignClick(PlayerInteractEvent e) {
       if (e.getClickedBlock() != null) {
          Material type = e.getClickedBlock().getType();
-         Sign sign = (Sign)e.getClickedBlock().getState();
-         String line0 = sign.getLine(0);
-         String line2 = sign.getLine(1);
-         if ((type == Material.WALL_SIGN || type == Material.SIGN_POST) && (line0.equalsIgnoreCase(ChatColor.DARK_PURPLE + "[Shop]") || line0.equalsIgnoreCase("[Shop]") && line2.equalsIgnoreCase(this.name))) {
-            if (this.name.contains("Brewing")) {
-               if (this.plugin.getPhase() >= 5) {
-                  this.openShop(e.getPlayer());
-               }
-            } else {
-               this.openShop(e.getPlayer());
-            }
+         if(type == Material.WALL_SIGN || type == Material.SIGN_POST) {
+	         Sign sign = (Sign)e.getClickedBlock().getState();
+	         String line0 = sign.getLine(0);
+	         String line2 = sign.getLine(1);
+	         if ((type == Material.WALL_SIGN || type == Material.SIGN_POST) && (line0.equalsIgnoreCase(ChatColor.DARK_PURPLE + "[Shop]") || line0.equalsIgnoreCase("[Shop]") && line2.equalsIgnoreCase(this.name))) {
+	            if (this.name.contains("Brewing")) {
+	               if (this.plugin.getPhase() >= 5) {
+	                  this.openShop(e.getPlayer());
+	               }
+	            } else {
+	               this.openShop(e.getPlayer());
+	            }
+	         }
          }
       }
 

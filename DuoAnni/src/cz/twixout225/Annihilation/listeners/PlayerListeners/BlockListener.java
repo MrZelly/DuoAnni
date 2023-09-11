@@ -176,21 +176,25 @@ public class BlockListener implements Listener {
    public void onBreakIII(BlockBreakEvent e) {
       GameTeam[] teams;
       int length = (teams = GameTeam.teams()).length;
-
-      for(int i = 0; i < length; ++i) {
-         GameTeam t = teams[i];
-         if (t.getNexus().getLocation().equals(e.getBlock().getLocation())) {
-            e.setCancelled(true);
-            if (t.getNexus().isAlive()) {
-               this.breakNexus(t, e.getPlayer());
-            }
-
-            return;
-         }
-      }
-
-      if (Util.tooClose(e.getBlock().getLocation(), this.plugin) && e.getBlock().getType() != Material.ENDER_STONE && e.getBlock().getType() != Material.MELON_BLOCK && e.getBlock().getType() != Material.BREWING_STAND) {
-         e.setCancelled(true);
+      if (e.getPlayer().getWorld().getName().equalsIgnoreCase("lobby")) {
+          e.setCancelled(true);
+      } else {
+	
+	      for(int i = 0; i < length; ++i) {
+	         GameTeam t = teams[i];
+	         if (t.getNexus().getLocation().equals(e.getBlock().getLocation())) {
+	            e.setCancelled(true);
+	            if (t.getNexus().isAlive()) {
+	               this.breakNexus(t, e.getPlayer());
+	            }
+	
+	            return;
+	         }
+	      }
+	
+	      if (Util.tooClose(e.getBlock().getLocation(), this.plugin) && e.getBlock().getType() != Material.ENDER_STONE && e.getBlock().getType() != Material.MELON_BLOCK && e.getBlock().getType() != Material.BREWING_STAND) {
+	         e.setCancelled(true);
+	      }
       }
 
    }

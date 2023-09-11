@@ -25,9 +25,9 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          this.spawnItems.add(new ItemStack(Material.WORKBENCH));
-         this.lore.add("+ Wood sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone sword");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Crafting table");
       }
    },
@@ -38,8 +38,8 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          this.spawnItems.add((new Potion(PotionType.SPEED, 1)).toItemStack(1));
          this.lore.add("+ Stone sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Speed potion");
       }
    },
@@ -56,13 +56,13 @@ public enum Kit {
          this.spawnItems.add(bow);
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
-         this.spawnItems.add(new ItemStack(Material.WOOD_SPADE));
+         this.spawnItems.add(new ItemStack(Material.STONE_SPADE));
          this.spawnItems.add(new ItemStack(Material.ARROW, 16));
-         this.lore.add("+ Wood sword");
+         this.lore.add("+ Stone sword");
          this.lore.add("+ Bow");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
-         this.lore.add("+ Wood shovel");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
+         this.lore.add("+ Stone shovel");
          this.lore.add("+ 16 arrows");
       }
    },
@@ -72,9 +72,9 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          ((ItemStack)this.spawnItems.get(1)).addEnchantment(Enchantment.DIG_SPEED, 1);
-         this.lore.add("+ Wood sword");
+         this.lore.add("+ Stone sword");
          this.lore.add("+ Stone pickaxe (Efficiency I)");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone axe");
       }
    },
    JUMPER(Material.FEATHER) {
@@ -84,8 +84,8 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          this.spawnItems.add(this.create(Material.FEATHER, "§bLeap"));
          this.lore.add("+ Stone sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Leap item");
       }
    },
@@ -99,8 +99,8 @@ public enum Kit {
          potion.apply(itemStack);
          this.spawnItems.add(itemStack);
          this.lore.add("+ Stone sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Ignition at hit");
          this.lore.add("+ Fire resistance");
       }
@@ -111,9 +111,9 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          this.spawnItems.add(this.create(Material.GHAST_TEAR, "§bHeal"));
-         this.lore.add("+ Wood sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone sword");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Heal every 45 seconds");
       }
    },
@@ -123,8 +123,8 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          this.lore.add("+ Stone sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Get gapple on kill (max 5)");
       }
    },
@@ -135,8 +135,8 @@ public enum Kit {
 	         this.spawnItems.add(new ItemStack(Material.STONE_AXE));
 	         this.spawnItems.add(new ItemStack(Material.FISHING_ROD));
 	         this.lore.add("+ Stone sword");
-	         this.lore.add("+ Wood pickaxe");
-	         this.lore.add("+ Wood axe");
+	         this.lore.add("+ Stone pickaxe");
+	         this.lore.add("+ Stone axe");
 	         this.lore.add("+ Fishing rod that attracts hit palyers");
 	      } //
 	   },
@@ -147,8 +147,8 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          this.spawnItems.add(this.create(Material.EYE_OF_ENDER, "§bTeleporter"));
          this.lore.add("+ Stone sword");
-         this.lore.add("+ Wood pickaxe");
-         this.lore.add("+ Wood axe");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
          this.lore.add("+ Teleport to base every 60 seconds");
       }
    };

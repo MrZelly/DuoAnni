@@ -49,7 +49,7 @@ public class ClassAbilityListener implements Listener {
       if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
          if (pla.getItemInHand().getType() == Material.FEATHER && pla.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase("§bLeap")) {
             if (pmeta.getCooldown() == 0) {
-               if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+               if (pla.getInventory().getLeggings() != null && pla.getInventory().getLeggings().getItemMeta() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
             	   pmeta.setCooldown(7);
                } else {
             	   pmeta.setCooldown(10);
@@ -63,7 +63,7 @@ public class ClassAbilityListener implements Listener {
 
          if (pla.getItemInHand().getType() == Material.GHAST_TEAR && pla.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase("§bHeal")) {
             if (pmeta.getCooldown() == 0) {
-                if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+               if (pla.getInventory().getLeggings() != null && pla.getInventory().getLeggings().getItemMeta() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
              	   pmeta.setCooldown(34);
                 } else {
              	   pmeta.setCooldown(45);
@@ -81,7 +81,7 @@ public class ClassAbilityListener implements Listener {
             item = new ItemStack(Material.ENDER_PEARL, 1);
             SoulboundListener.soulbind(item);
             if (pmeta.getCooldown() == 0) {
-                if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+               if (pla.getInventory().getLeggings() != null && pla.getInventory().getLeggings().getItemMeta() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
              	   pmeta.setCooldown(45);
                 } else {
              	   pmeta.setCooldown(60);
@@ -105,7 +105,7 @@ public class ClassAbilityListener implements Listener {
                   SoulboundListener.soulbind(web);
                   pla.getInventory().addItem(new ItemStack[]{web});
                   pla.playSound(pla.getLocation(), Sound.SPIDER_DEATH, 1.0F, 2.0F);
-                  if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+                 if (pla.getInventory().getLeggings() != null && pla.getInventory().getLeggings().getItemMeta() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
                	   pmeta.setCooldown(45);
                   } else {
                	   pmeta.setCooldown(60);
@@ -128,7 +128,7 @@ public class ClassAbilityListener implements Listener {
 
          if (e.getMaterial() == Material.EYE_OF_ENDER) {
             if (pmeta.getCooldown() == 0) {
-                if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+               if (pla.getInventory().getLeggings() != null && pla.getInventory().getLeggings().getItemMeta() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
              	   pmeta.setCooldown(45);
                 } else {
              	   pmeta.setCooldown(60);
@@ -146,7 +146,7 @@ public class ClassAbilityListener implements Listener {
 
    @EventHandler
    public void Kill(PlayerDeathEvent e) {
-      if (e.getEntity() instanceof Player) {
+      if (e.getEntity() instanceof Player && e.getEntity().getKiller() instanceof Player) {
          Player pla = e.getEntity();
          if (PlayerMeta.getMeta(pla.getKiller().getName()).getKit() == Kit.ARCHER) {
             if (!this.archerKills.containsKey(pla.getKiller().getName())) {
@@ -190,9 +190,12 @@ public class ClassAbilityListener implements Listener {
                pla.getKiller().getInventory().addItem(new ItemStack[]{gapple});
             }
          }
-         
-         if (pla.getInventory().getBoots().getItemMeta().getDisplayName() == "Fly boots") {
-        	 pla.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100, 0));
+         if (pla.getKiller().getInventory().getBoots() != null && 
+   			 pla.getKiller().getInventory().getBoots().getItemMeta() != null && 
+   			 pla.getKiller().getInventory().getBoots().getItemMeta().getDisplayName() != null && 
+   			 pla.getKiller().getInventory().getBoots().getItemMeta().getDisplayName().contains("Fly boots")) {
+        	 pla.getKiller().removePotionEffect(PotionEffectType.SPEED);
+        	 pla.getKiller().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0));
          }
       }
 
@@ -226,9 +229,11 @@ public class ClassAbilityListener implements Listener {
    public void onArrowHit(EntityDamageByEntityEvent e) {
 	   if (e.getEntity() instanceof Player && e.getDamager() instanceof Arrow) {
 		   Player player = (Player) e.getEntity();
-		   if(player.getInventory().getHelmet().getItemMeta().getDisplayName() == "Oxyger") {
+		   if(player.getInventory().getHelmet() != null && 
+			  player.getInventory().getHelmet().getItemMeta() != null && 
+			  player.getInventory().getHelmet().getItemMeta().getDisplayName() != null && 
+			  player.getInventory().getHelmet().getItemMeta().getDisplayName().contains("Oxyger")) {
 			   double damage = e.getDamage() / 100;
-			   //e.setCancelled(true);
 			   e.setDamage(damage);
 		   }
 	   }
@@ -239,8 +244,12 @@ public class ClassAbilityListener implements Listener {
 	   if (e.getEntity() instanceof Player && e.getDamager() instanceof Player) {
 		   Player player = (Player) e.getEntity();
 		   Player damager = (Player) e.getDamager();
-		   if(player.getInventory().getChestplate().getItemMeta().getDisplayName() == "Troll plate") {
-			   damager.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 40, 1));
+		   if(player.getInventory().getChestplate() != null && 
+			  player.getInventory().getChestplate().getItemMeta() != null && 
+			  player.getInventory().getChestplate().getItemMeta().getDisplayName() != null && 
+			  player.getInventory().getChestplate().getItemMeta().getDisplayName().contains("Troll plate")) {
+			  damager.removePotionEffect(PotionEffectType.CONFUSION);
+			  damager.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 2));
 		   }
 	   }
 
