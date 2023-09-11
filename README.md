@@ -31,7 +31,7 @@ NEW BOSS DROPS:<br>
 ~Boss IV. (20. minuta) = Dia Helmet, Dia Chestplate, Dia Leggings, Dia Boots, Infinity Shooter (tento luk nemá žádnou speciální abilitu) (vše prot. III with special ability on each item) <= [RANDOM DROP FROM THESE ITEMS]~
 ~Boss V. - KONEC HRY (25. - KONEC HRY) = Stále to stejné~
 
-SPECIAL ABILITIES ON BOSS ITEMS
+SPECIAL ABILITIES ON BOSS ITEMS <br>
 ~Dia Helmet => snižuje damage z luku o 100%~ ?
 ~Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2 sekundy~ ?
 Dia Leggings => všechny cooldowny na kit items se sníží o 25%
