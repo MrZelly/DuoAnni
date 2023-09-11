@@ -49,7 +49,11 @@ public class ClassAbilityListener implements Listener {
       if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
          if (pla.getItemInHand().getType() == Material.FEATHER && pla.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase("§bLeap")) {
             if (pmeta.getCooldown() == 0) {
-               pmeta.setCooldown(10);
+               if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+            	   pmeta.setCooldown(7);
+               } else {
+            	   pmeta.setCooldown(10);
+               }
                pla.setVelocity(pla.getLocation().getDirection().setY(0.9D).multiply(1.2D));
                pla.playSound(pla.getLocation(), Sound.ENDERDRAGON_WINGS, 1.0F, 2.0F);
             } else {
@@ -59,7 +63,11 @@ public class ClassAbilityListener implements Listener {
 
          if (pla.getItemInHand().getType() == Material.GHAST_TEAR && pla.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase("§bHeal")) {
             if (pmeta.getCooldown() == 0) {
-               pmeta.setCooldown(45);
+                if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+             	   pmeta.setCooldown(34);
+                } else {
+             	   pmeta.setCooldown(45);
+                }
                double currentHealth = pla.getHealth();
                pla.setHealth(currentHealth + 15.0D);
                pla.playSound(pla.getLocation(), Sound.VILLAGER_YES, 1.0F, 2.0F);
@@ -73,7 +81,11 @@ public class ClassAbilityListener implements Listener {
             item = new ItemStack(Material.ENDER_PEARL, 1);
             SoulboundListener.soulbind(item);
             if (pmeta.getCooldown() == 0) {
-               pmeta.setCooldown(60);
+                if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+             	   pmeta.setCooldown(45);
+                } else {
+             	   pmeta.setCooldown(60);
+                }
                pla.getInventory().addItem(new ItemStack[]{item});
             } else {
                e.setCancelled(true);
@@ -93,8 +105,11 @@ public class ClassAbilityListener implements Listener {
                   SoulboundListener.soulbind(web);
                   pla.getInventory().addItem(new ItemStack[]{web});
                   pla.playSound(pla.getLocation(), Sound.SPIDER_DEATH, 1.0F, 2.0F);
-                  pmeta.setCooldown(20);
-               }
+                  if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+               	   pmeta.setCooldown(45);
+                  } else {
+               	   pmeta.setCooldown(60);
+                  }               }
             } else {
                pla.sendMessage("§8[§eCooldown§8] §cPlease wait before using ability again! §7(§e" + pmeta.getCooldown() + "§7)");
             }
@@ -113,8 +128,11 @@ public class ClassAbilityListener implements Listener {
 
          if (e.getMaterial() == Material.EYE_OF_ENDER) {
             if (pmeta.getCooldown() == 0) {
-               pmeta.setCooldown(60);
-               pla.teleport(pmeta.getTeam().getRandomSpawn());
+                if (pla.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+             	   pmeta.setCooldown(45);
+                } else {
+             	   pmeta.setCooldown(60);
+                }               pla.teleport(pmeta.getTeam().getRandomSpawn());
                e.setCancelled(true);
             } else {
                e.setCancelled(true);
@@ -209,8 +227,8 @@ public class ClassAbilityListener implements Listener {
 	   if (e.getEntity() instanceof Player && e.getDamager() instanceof Arrow) {
 		   Player player = (Player) e.getEntity();
 		   if(player.getInventory().getHelmet().getItemMeta().getDisplayName() == "Oxyger") {
-			   double damage = e.getDamage() / 2;
-			   e.setCancelled(true);
+			   double damage = e.getDamage() / 100;
+			   //e.setCancelled(true);
 			   e.setDamage(damage);
 		   }
 	   }
@@ -258,8 +276,11 @@ public class ClassAbilityListener implements Listener {
      if (e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() == 0){
        Entity caught = e.getCaught();    
        caught.teleport(player);
-       meta.setCooldown(40);
-     }
+       if (player.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
+    	   meta.setCooldown(30);
+       } else {
+    	   meta.setCooldown(40);
+       }     }
      else if (e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() != 0) {
        player.sendMessage("§8[§eCooldown§8] §cPlease wait before attaracting someone again §7(§e" + meta.getCooldown() + "§7)");
      }

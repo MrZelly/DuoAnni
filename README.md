@@ -34,6 +34,6 @@ NEW BOSS DROPS:<br>
 SPECIAL ABILITIES ON BOSS ITEMS <br>
 ~Dia Helmet => snižuje damage z luku o 100%~ ? <br>
 ~Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2 sekundy~ ? <br>
-Dia Leggings => všechny cooldowny na kit items se sníží o 25% <br>
+~Dia Leggings => všechny cooldowny na kit items se sníží o 25%~ ? <br>
 ~Dia Boots => za každý kill hráč obdrží efekt Speed I na 5 sekund~ ? <br>
 to co je preskrtnute je done <br>
