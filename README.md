@@ -1,7 +1,7 @@
 # DuoAnni by Zelly
 
 ## TODO:
-přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit)
+přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit) <br>
 ~nově se budou bossové spawnovat každých 5 minut~
 
 ~přidat od 5. fáze Haste II pro všechny hráče~
