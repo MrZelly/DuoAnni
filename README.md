@@ -37,5 +37,3 @@ Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2
 Dia Leggings => všechny cooldowny na kit items se sníží o 25%
 Dia Boots => za každý kill hráč obdrží efekt Speed I na 5 sekund 
 to co je preskrtnute je done
-
-test
