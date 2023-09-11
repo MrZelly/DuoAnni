@@ -1,13 +1,15 @@
 # DuoAnni by Zelly
 
 ## TODO:
-přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit) <br>
+
+#### Gameplay:
 ~nově se budou bossové spawnovat každých 5 minut~ <br>
 
 ~přidat od 5. fáze Haste II pro všechny hráče~  <br>
 ~přidat všem kitům do základní výbavy kamenný krumpáč a kamennou sekeru~<br>
 od 90. minuty se zničí 1 život na enemy nexusu za každý kill a na obou nexusech 1 život každou minutu  <br>
 
+#### Kity:
 ~odstranit kit "Dealer"~  <br>
 ~odstranit kit "Enderman"~ <br>
 ~odstranit kit "Spider"~  <br>
@@ -24,6 +26,9 @@ NEW KITS:<br>
 ~přidat kit "Guard", jež umožní hráči se pomocí speciálního předmětu portnout každou minutu na domací spawn~ <br>
 ~přidat kit "Assasin", který dostane za každý kill gapple (max. 5). Spawnuje se s 1x gapple~ <br>
 
+#### Boss:
+přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit) <br>
+
 NEW BOSS DROPS:<br>
 ~Boss I. (5. minuta) => Dia Helmet, Dia Chestplate, Dia Leggings, Dia Boots (vše prot. II) <= [RANDOM DROP FROM THESE ITEMS]~ <br>
 ~Boss II. (10. minuta) => Dia Helmet, Dia Chestplate, Dia Leggings, Dia Boots, Infinity Shooter (vše prot. III) <= [RANDOM DROP FROM THESE ITEMS]~ <br>
@@ -31,6 +36,7 @@ NEW BOSS DROPS:<br>
 ~Boss IV. (20. minuta) = Dia Helmet, Dia Chestplate, Dia Leggings, Dia Boots, Infinity Shooter (tento luk nemá žádnou speciální abilitu) (vše prot. III with special ability on each item) <= [RANDOM DROP FROM THESE ITEMS]~ <br>
 ~Boss V. - KONEC HRY (25. - KONEC HRY) = Stále to stejné~ <br>
 
+#### Items:
 SPECIAL ABILITIES ON BOSS ITEMS <br>
 ~Dia Helmet => snižuje damage z luku o 100%~ ? <br>
 ~Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2 sekundy~ ? <br>
