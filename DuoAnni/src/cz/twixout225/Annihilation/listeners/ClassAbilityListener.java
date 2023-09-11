@@ -11,6 +11,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -171,6 +172,10 @@ public class ClassAbilityListener implements Listener {
                pla.getKiller().getInventory().addItem(new ItemStack[]{gapple});
             }
          }
+         
+         if (pla.getInventory().getBoots().getItemMeta().getDisplayName() == "Fly boots") {
+        	 pla.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100, 0));
+         }
       }
 
    }
@@ -197,6 +202,29 @@ public class ClassAbilityListener implements Listener {
             e.getEntity().setFireTicks(60);
          }
       }
+   }
+   
+   @EventHandler
+   public void onArrowHit(EntityDamageByEntityEvent e) {
+	   if (e.getEntity() instanceof Player && e.getDamager() instanceof Arrow) {
+		   Player player = (Player) e.getEntity();
+		   if(player.getInventory().getHelmet().getItemMeta().getDisplayName() == "Oxyger") {
+			   double damage = e.getDamage() / 2;
+			   e.setCancelled(true);
+			   e.setDamage(damage);
+		   }
+	   }
+   }
+   
+   @EventHandler
+   public void onNauseaArmorHit(EntityDamageByEntityEvent e) {
+	   if (e.getEntity() instanceof Player && e.getDamager() instanceof Player) {
+		   Player player = (Player) e.getEntity();
+		   Player damager = (Player) e.getDamager();
+		   if(player.getInventory().getChestplate().getItemMeta().getDisplayName() == "Troll plate") {
+			   damager.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 40, 1));
+		   }
+	   }
 
    }
 
@@ -227,7 +255,7 @@ public class ClassAbilityListener implements Listener {
      Player player = e.getPlayer();
      PlayerMeta meta = PlayerMeta.getMeta(e.getPlayer());
     
-     if(e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() == 0){
+     if (e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() == 0){
        Entity caught = e.getCaught();    
        caught.teleport(player);
        meta.setCooldown(40);

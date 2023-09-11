@@ -32,8 +32,8 @@ NEW BOSS DROPS:<br>
 ~Boss V. - KONEC HRY (25. - KONEC HRY) = Stále to stejné~
 
 SPECIAL ABILITIES ON BOSS ITEMS
-Dia Helmet => snižuje damage z luku o 100%
-Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2 sekundy
+~Dia Helmet => snižuje damage z luku o 100%~ ?
+~Dia Chestplate => za každý hit na tebe obdrží daný hráč efekt Nausea na 2 sekundy~ ?
 Dia Leggings => všechny cooldowny na kit items se sníží o 25%
-Dia Boots => za každý kill hráč obdrží efekt Speed I na 5 sekund 
+~Dia Boots => za každý kill hráč obdrží efekt Speed I na 5 sekund ~ ?
 to co je preskrtnute je done
