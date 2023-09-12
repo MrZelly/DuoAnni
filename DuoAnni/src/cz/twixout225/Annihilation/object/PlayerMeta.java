@@ -15,11 +15,13 @@ public class PlayerMeta {
    private Kit kit;
    private boolean alive;
    private int cooldown;
+   public boolean isTeleporting;
 
    public PlayerMeta() {
       this.team = GameTeam.NONE;
       this.kit = Kit.CIVILIAN;
       this.alive = false;
+      this.isTeleporting = false;
    }
 
    public PlayerMeta(Annihilation pl) {
@@ -42,6 +44,10 @@ public class PlayerMeta {
 
    public int getCooldown() {
       return this.cooldown;
+   }
+   
+   public boolean isTeleporting() {
+	   return this.isTeleporting;
    }
 
    public void setCooldown(int cld) {

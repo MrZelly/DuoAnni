@@ -29,6 +29,7 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class ClassAbilityListener implements Listener {
    private final HashMap<String, Location> blockLocations = new HashMap();
@@ -126,20 +127,18 @@ public class ClassAbilityListener implements Listener {
             }
          }
 
-         if (e.getMaterial() == Material.EYE_OF_ENDER) {
-            if (pmeta.getCooldown() == 0) {
-               if (pla.getInventory().getLeggings() != null && pla.getInventory().getLeggings().getItemMeta() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null && pla.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
-             	   pmeta.setCooldown(45);
-                } else {
-             	   pmeta.setCooldown(60);
-                }               pla.teleport(pmeta.getTeam().getRandomSpawn());
-               e.setCancelled(true);
-            } else {
-               e.setCancelled(true);
-               pla.sendMessage("§8[§eCooldown§8] §cPlease wait before teleporting again §7(§e" + pmeta.getCooldown() + "§7)");
-               pla.updateInventory();
-            }
-         }
+			/*
+			 * if (e.getMaterial() == Material.EYE_OF_ENDER) { if (pmeta.getCooldown() == 0)
+			 * { if (pla.getInventory().getLeggings() != null &&
+			 * pla.getInventory().getLeggings().getItemMeta() != null &&
+			 * pla.getInventory().getLeggings().getItemMeta().getDisplayName() != null &&
+			 * pla.getInventory().getLeggings().getItemMeta().getDisplayName().
+			 * contains("Quick leggings")) { pmeta.setCooldown(45); } else {
+			 * pmeta.setCooldown(60); } pla.teleport(pmeta.getTeam().getRandomSpawn());
+			 * e.setCancelled(true); } else { e.setCancelled(true); pla.
+			 * sendMessage("§8[§eCooldown§8] §cPlease wait before teleporting again §7(§e" +
+			 * pmeta.getCooldown() + "§7)"); pla.updateInventory(); } }
+			 */
       }
 
    }
@@ -156,28 +155,22 @@ public class ClassAbilityListener implements Listener {
             }
 
             if (pla.getKiller().getItemInHand().getType() == Material.BOW && pla.getKiller().getItemInHand() != null && pla.getKiller().getItemInHand().getItemMeta().getLore().contains("Mysterious Bow")) {
-               this.archerKills.remove(pla.getKiller().getName());
-               switch(pla.getKiller().getItemInHand().getEnchantmentLevel(Enchantment.ARROW_DAMAGE)) {
-               case 0:
-                  pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
-                  pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 1);
-                  break;
-               case 1:
-                  pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
-                  pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 2);
-                  break;
-               case 2:
-                  pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
-                  pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 3);
-                  break;
-               case 3:
-                  pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
-                  pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 4);
-                  break;
-               case 4:
-                  pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
-                  pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 5);
-               }
+            	if(this.archerKills.get(pla.getKiller()) == 1) {
+                  	pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
+                  	pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 1);
+            	} else if (this.archerKills.get(pla.getKiller()) == 2){
+            		pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
+                  	pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 2);
+            	} else if (this.archerKills.get(pla.getKiller()) == 5){
+              		pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
+                  	pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 3);
+            	} else if (this.archerKills.get(pla.getKiller()) == 9){
+              		pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
+              		pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 4);
+            	} else if (this.archerKills.get(pla.getKiller()) == 14){
+            	   pla.getKiller().getItemInHand().removeEnchantment(Enchantment.ARROW_DAMAGE);
+            	   pla.getKiller().getItemInHand().addEnchantment(Enchantment.ARROW_DAMAGE, 5);
+            	}
             }
          }
 
@@ -198,20 +191,110 @@ public class ClassAbilityListener implements Listener {
         	 pla.getKiller().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 0));
          }
       }
-
+   }
+   
+   @EventHandler
+   public void onGuardTeleport(PlayerInteractEvent e) {
+      Player player = e.getPlayer();
+      PlayerMeta meta = PlayerMeta.getMeta(player);
+      if ((e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) && e.getMaterial() == Material.EYE_OF_ENDER) {
+          e.setCancelled(true);
+	      if (meta.getCooldown() == 0) {
+	    	  meta.isTeleporting = true;
+	    	  player.sendMessage("§8Teleporting in 5");
+	          new BukkitRunnable() {
+	        	  @Override
+	        	  public void run() {
+	        		  if (meta.isTeleporting) {
+	        	    	  player.sendMessage("§8Teleporting in 4");
+	        		  } else {
+	        			  
+	        		  }
+	        	  }
+	          }.runTaskLater(this.plugin, 20);
+	          new BukkitRunnable() {
+	        	  @Override
+	        	  public void run() {
+	        		  if (meta.isTeleporting) {
+	        	    	  player.sendMessage("§8Teleporting in 3");
+	        		  } else {
+	        			  
+	        		  }
+	        	  }
+	          }.runTaskLater(this.plugin, 40);
+	          new BukkitRunnable() {
+	        	  @Override
+	        	  public void run() {
+	        		  if (meta.isTeleporting) {
+	        	    	  player.sendMessage("§8Teleporting in 2");
+	        		  } else {
+	        			  
+	        		  }
+	        	  }
+	          }.runTaskLater(this.plugin, 60);
+	          new BukkitRunnable() {
+	        	  @Override
+	        	  public void run() {
+	        		  if (meta.isTeleporting) {
+	        	    	  player.sendMessage("§8Teleporting in 1");
+	        		  } else {
+	        			  
+	        		  }
+	        	  }
+	          }.runTaskLater(this.plugin, 80);
+	          new BukkitRunnable() {
+	        	  @Override
+	        	  public void run() {
+	        		  if (meta.isTeleporting) {
+	        	    	  player.sendMessage("§8Teleporting now");
+		    	          player.teleport(meta.getTeam().getRandomSpawn());
+		    	          meta.isTeleporting = false;
+	        		  } else {
+	        			  
+	        		  }
+	        	  }
+	          }.runTaskLater(this.plugin, 100);
+	          
+	          if (player.getInventory().getLeggings() != null && player.getInventory().getLeggings().getItemMeta() != null && player.getInventory().getLeggings().getItemMeta().getDisplayName() != null && player.getInventory().getLeggings().getItemMeta().getDisplayName().contains("Quick leggings")) {
+	        	   meta.setCooldown(45);
+	          } else {
+	        	   meta.setCooldown(60);
+	          }
+	      } else {
+	          e.setCancelled(true);
+	          player.sendMessage("§8[§eCooldown§8] §cPlease wait before teleporting again §7(§e" + meta.getCooldown() + "§7)");
+	          player.updateInventory();
+	      }
+      }
    }
 
    @EventHandler
-   public void Firemanrespawn(PlayerRespawnEvent e) {
+   public void onHitWhileGuardIsTeleporting(EntityDamageByEntityEvent e) {
+      Player player = (Player) e.getEntity();
+      PlayerMeta meta = PlayerMeta.getMeta(player);
+      if (meta.isTeleporting()) {
+    	  meta.isTeleporting = false;
+    	  player.sendMessage("§cTeleporting cancelled because you got hit");
+      }
+   }
+   
+   @EventHandler
+   public void Firemanrespawn(PlayerRespawnEvent e) {	  
       PlayerMeta meta = PlayerMeta.getMeta(e.getPlayer());
-      if (meta.getKit() == Kit.FIREMAN) {
-         e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100000, 2));
-      }
-
       if (this.cooldowns.containsKey(meta.getName())) {
-         meta.setCooldown(0);
-      }
-
+          meta.setCooldown(0);
+       }
+      
+      new BukkitRunnable() {
+    	  @Override
+    	  public void run() {
+	          if (meta.getKit() == Kit.FIREMAN) {
+	             e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100000, 0));
+	          } else if (meta.getKit() == Kit.RUSHER) {
+	             e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 100000, 0));
+	          }
+    	  }
+      }.runTaskLater(this.plugin, 20);
    }
 
    @EventHandler
@@ -277,7 +360,7 @@ public class ClassAbilityListener implements Listener {
 
    }
    
-   @EventHandler
+/*   @EventHandler
    public void onPlayerFish(PlayerFishEvent e){
      Player player = e.getPlayer();
      PlayerMeta meta = PlayerMeta.getMeta(e.getPlayer());
@@ -293,7 +376,7 @@ public class ClassAbilityListener implements Listener {
      else if (e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() != 0) {
        player.sendMessage("§8[§eCooldown§8] §cPlease wait before attaracting someone again §7(§e" + meta.getCooldown() + "§7)");
      }
-   }
+   }*/
 
    private void update() {
       Iterator var2 = this.cooldowns.entrySet().iterator();
@@ -310,7 +393,6 @@ public class ClassAbilityListener implements Listener {
             }
          }
       }
-
    }
 
    // $FF: synthetic method

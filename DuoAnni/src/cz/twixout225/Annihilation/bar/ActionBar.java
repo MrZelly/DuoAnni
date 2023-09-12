@@ -17,7 +17,7 @@ public class ActionBar {
          message = String.valueOf(a[0]) + " " + a[2];
       }
 
-      if (player.getItemInHand().getType() == Material.FEATHER || player.getItemInHand().getType() == Material.GHAST_TEAR || player.getItemInHand().getType() == Material.FISHING_ROD && PlayerMeta.getMeta(player).getKit() == Kit.FISHERMAN || player.getItemInHand().getType() == Material.SUGAR || player.getItemInHand().getType() == Material.BLAZE_ROD || player.getItemInHand().getType() == Material.EYE_OF_ENDER) {
+      if (player.getItemInHand().getType() == Material.FEATHER || player.getItemInHand().getType() == Material.GHAST_TEAR || /*player.getItemInHand().getType() == Material.FISHING_ROD && PlayerMeta.getMeta(player).getKit() == Kit.FISHERMAN ||*/ player.getItemInHand().getType() == Material.SUGAR || player.getItemInHand().getType() == Material.BLAZE_ROD || player.getItemInHand().getType() == Material.EYE_OF_ENDER) {
          if (PlayerMeta.getMeta(player).getCooldown() > 0) {
             message = "§c§l" + PlayerMeta.getMeta(player).getCooldown();
          } else {

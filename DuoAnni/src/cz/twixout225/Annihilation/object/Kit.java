@@ -36,17 +36,17 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
-         this.spawnItems.add((new Potion(PotionType.SPEED, 1)).toItemStack(1));
+//         this.spawnItems.add((new Potion(PotionType.SPEED, 1)).toItemStack(1));
          this.lore.add("+ Stone sword");
          this.lore.add("+ Stone pickaxe");
          this.lore.add("+ Stone axe");
-         this.lore.add("+ Speed potion");
+         this.lore.add("+ Permanent speed I");
       }
    },
    ARCHER(Material.BOW) {
       {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
-         ItemStack bow = this.create(Material.BOW, "§bStrong Bow");
+         ItemStack bow = this.create(Material.BOW, "§bMysterious Bow");
          ItemMeta me = bow.getItemMeta();
          ArrayList<String> bowlore = new ArrayList();
          bowlore.add("Mysterious Bow");
@@ -72,9 +72,10 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
          ((ItemStack)this.spawnItems.get(1)).addEnchantment(Enchantment.DIG_SPEED, 1);
+         ((ItemStack)this.spawnItems.get(2)).addEnchantment(Enchantment.DIG_SPEED, 1);
          this.lore.add("+ Stone sword");
          this.lore.add("+ Stone pickaxe (Efficiency I)");
-         this.lore.add("+ Stone axe");
+         this.lore.add("+ Stone axe (Efficiency I)");
       }
    },
    JUMPER(Material.FEATHER) {
@@ -94,15 +95,15 @@ public enum Kit {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
-         Potion potion = new Potion(PotionType.FIRE_RESISTANCE, 1, true, true);
-         ItemStack itemStack = new ItemStack(Material.POTION);
-         potion.apply(itemStack);
-         this.spawnItems.add(itemStack);
+//         Potion potion = new Potion(PotionType.FIRE_RESISTANCE, 1, true, true);
+//         ItemStack itemStack = new ItemStack(Material.POTION);
+//         potion.apply(itemStack);
+//         this.spawnItems.add(itemStack);
          this.lore.add("+ Stone sword");
          this.lore.add("+ Stone pickaxe");
          this.lore.add("+ Stone axe");
          this.lore.add("+ Ignition at hit");
-         this.lore.add("+ Fire resistance");
+         this.lore.add("+ Permanent fire resistance");
       }
    },
    HEALER(Material.GHAST_TEAR) {
@@ -117,7 +118,7 @@ public enum Kit {
          this.lore.add("+ Heal every 45 seconds");
       }
    },
-   ASSASIN(Material.IRON_SWORD) {
+   ASSASIN(Material.GOLDEN_APPLE) {
       {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
@@ -128,19 +129,19 @@ public enum Kit {
          this.lore.add("+ Get gapple on kill (max 5)");
       }
    },
-   FISHERMAN(Material.FISHING_ROD) {
-	      {
-	         this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
-	         this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
-	         this.spawnItems.add(new ItemStack(Material.STONE_AXE));
-	         this.spawnItems.add(new ItemStack(Material.FISHING_ROD));
-	         this.lore.add("+ Stone sword");
-	         this.lore.add("+ Stone pickaxe");
-	         this.lore.add("+ Stone axe");
-	         this.lore.add("+ Fishing rod that attracts hit palyers");
-	      } //
-	   },
-   GUARD(Material.IRON_CHESTPLATE) {
+/*   FISHERMAN(Material.FISHING_ROD) {
+      {
+         this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
+         this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
+         this.spawnItems.add(new ItemStack(Material.STONE_AXE));
+         this.spawnItems.add(new ItemStack(Material.FISHING_ROD));
+         this.lore.add("+ Stone sword");
+         this.lore.add("+ Stone pickaxe");
+         this.lore.add("+ Stone axe");
+         this.lore.add("+ Fishing rod that teleports players to you on hit every 60 seconds");
+      }
+   },*/
+   GUARD(Material.EYE_OF_ENDER) {
       {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));

@@ -168,6 +168,7 @@ public class ChatUtil {
          break;
       case 5:
          broadcast(String.valueOf(String.valueOf(String.valueOf(RED))) + "Double nexus damage");
+         broadcast(String.valueOf(String.valueOf(String.valueOf(RED))) + "Haste II");
       }
 
       broadcast(String.valueOf(String.valueOf(String.valueOf(GRAY))) + "================================");
