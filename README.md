@@ -1,17 +1,16 @@
 # DuoAnni by Zelly
 
 ## TODO:
-přesunout bosse pryč z midu někde více na okraj mapy (treba mapy prerobit) <br>
 od 90. minuty se zničí 1 život na enemy nexusu za každý kill a na obou nexusech 1 život každou minutu  <br>
 ## Update v1.2:
 #### Kity:
-Rusher: ma permanentnú Speed I
-Archer: ma stone shovel, změnit jméno na "Mysterious Bow". Powery takto: Power 1 (za 1 kill), Power 2 (za 2 killy), Power 3 (za 3 killy), Power 4 (za 4 killy), Power 5 (za 5 killů)
-Miner: Effi I i na sekere
-Fireman: permanentní Fire Resistence
-Assasin: obrázek pro kit Gapple místo Iron Swordu
-Fisherman: odstraneni do vymyslenia lepsieho fungovania
-Guard cooldown nad hotbarem, obrázek kitu zmeneni na ender eye, pridany čas (5 sekund), co musíš počkat předtím než tě to portne (bez toho aniž by tě někdo hitnul)
+Rusher: ma permanentnú Speed I <br>
+Archer: ma stone shovel, změnit jméno na "Mysterious Bow". Powery takto: Power 1 (za 1 kill), Power 2 (za 2 killy), Power 3 (za 3 killy), Power 4 (za 4 killy), Power 5 (za 5 killů) <br>
+Miner: Effi I i na sekere <br>
+Fireman: permanentní Fire Resistence <br>
+Assasin: obrázek pro kit Gapple místo Iron Swordu <br>
+Fisherman: odstraneni do vymyslenia lepsieho fungovania <br>
+Guard cooldown nad hotbarem, obrázek kitu zmeneni na ender eye, pridany čas (5 sekund), co musíš počkat předtím než tě to portne (bez toho aniž by tě někdo hitnul) <br>
 
 ## Update v1.1.1:
 #### Gameplay:
