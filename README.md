@@ -1,7 +1,12 @@
 # DuoAnni by Zelly
 
 ## TODO:
-od 90. minuty se zničí 1 život na enemy nexusu za každý kill a na obou nexusech 1 život každou minutu  <br>
+od 60. minuty se zničí 1 život na enemy nexusu za každý kill a na obou nexusech 1 život každou minutu  <br>
+2 boss spawn pozicie a jedna sa vybere nahodne  <br>
+fungujuci health indicator pri nametagu  <br>
+po hre presunut na lobby a nie kicknut  <br>
+fix frozen  <br>
+přidal bych do scoreboardu víc údajů než jen nexusy, protože nad tím hotbarem toho je až moc (phase, cooldowny, boss hp) dal bych z tama úplně pryč boss hp (nechal bych to bossovi nad hlavou), informace ohledně fází a herního času bych dal do scoreboardu a nad hotbar bych dal pouze cooldowny u některých itemů (ideální by bylo, kdyby se aktualizovali každou sekundu a ne každé 2 sekundy, jak je tomu teď) <br>
 ## Update v1.2:
 #### Kity:
 Rusher: ma permanentnú Speed I <br>
