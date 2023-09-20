@@ -255,7 +255,7 @@ public class BlockListener implements Listener {
                Player p = (Player)var8.next();
                p.sendMessage(msg);
             }
-
+            // Update scoreboardu ˇˇˇˇˇ
             ((Score)this.plugin.getScoreboardHandler().scores.get(victim.name())).setScore(victim.getNexus().getHealth());
             Bukkit.getServer().getPluginManager().callEvent(new NexusDamageEvent(breaker, victim, victim.getNexus().getHealth()));
             Bukkit.getScheduler().runTaskLater(this.plugin, new Runnable() {

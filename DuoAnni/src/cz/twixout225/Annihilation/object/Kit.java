@@ -106,6 +106,17 @@ public enum Kit {
          this.lore.add("+ Permanent fire resistance");
       }
    },
+   WITHER(Material.BONE) {
+	      {
+	         this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
+	         this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
+	         this.spawnItems.add(new ItemStack(Material.STONE_AXE));
+	         this.lore.add("+ Stone sword");
+	         this.lore.add("+ Stone pickaxe");
+	         this.lore.add("+ Stone axe");
+	         this.lore.add("+ Shoot wither head every 20 seconds");
+	      }
+   },
    HEALER(Material.GHAST_TEAR) {
       {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
@@ -129,18 +140,18 @@ public enum Kit {
          this.lore.add("+ Get gapple on kill (max 5)");
       }
    },
-/*   FISHERMAN(Material.FISHING_ROD) {
+   MAGNET(Material.IRON_INGOT) {
       {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));
          this.spawnItems.add(new ItemStack(Material.STONE_PICKAXE));
          this.spawnItems.add(new ItemStack(Material.STONE_AXE));
-         this.spawnItems.add(new ItemStack(Material.FISHING_ROD));
+         this.spawnItems.add(new ItemStack(Material.SNOW_BALL));
          this.lore.add("+ Stone sword");
          this.lore.add("+ Stone pickaxe");
          this.lore.add("+ Stone axe");
-         this.lore.add("+ Fishing rod that teleports players to you on hit every 60 seconds");
+         this.lore.add("+ Snowball that throws players to you on hit every 60 seconds");
       }
-   },*/
+   },
    GUARD(Material.EYE_OF_ENDER) {
       {
          this.spawnItems.add(new ItemStack(Material.STONE_SWORD));

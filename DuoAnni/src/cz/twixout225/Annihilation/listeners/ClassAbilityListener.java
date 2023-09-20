@@ -14,12 +14,15 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Projectile;
+import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -30,6 +33,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.util.Vector;
 
 public class ClassAbilityListener implements Listener {
    private final HashMap<String, Location> blockLocations = new HashMap();
@@ -307,6 +311,18 @@ public class ClassAbilityListener implements Listener {
          }
       }
    }
+   @EventHandler
+   public void onWitherHit(EntityDamageByEntityEvent e) {
+      if (e.getEntity() instanceof Player && e.getDamager() instanceof Player) {
+         Player damager = (Player)e.getDamager();
+         PlayerMeta meta = PlayerMeta.getMeta(damager);
+         if (meta.getKit() == Kit.WITHER) {
+            Player player = (Player) e.getEntity();
+            player.removePotionEffect(PotionEffectType.WITHER);
+            player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 0));
+         }
+      }
+   }
    
    @EventHandler
    public void onArrowHit(EntityDamageByEntityEvent e) {
@@ -360,24 +376,43 @@ public class ClassAbilityListener implements Listener {
 
    }
    
-/*   @EventHandler
-   public void onPlayerFish(PlayerFishEvent e){
-     Player player = e.getPlayer();
-     PlayerMeta meta = PlayerMeta.getMeta(e.getPlayer());
-    
-     if (e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() == 0){
-       Entity caught = e.getCaught();    
-       caught.teleport(player);
-       if (player.getInventory().getLeggings().getItemMeta().getDisplayName() == "Quick leggings") {
-    	   meta.setCooldown(30);
-       } else {
-    	   meta.setCooldown(40);
-       }     }
-     else if (e.getState() == PlayerFishEvent.State.CAUGHT_ENTITY && meta.getKit() == Kit.FISHERMAN && meta.getCooldown() != 0) {
-       player.sendMessage("§8[§eCooldown§8] §cPlease wait before attaracting someone again §7(§e" + meta.getCooldown() + "§7)");
-     }
-   }*/
+   @EventHandler
+   public void onSnowballHit(EntityDamageByEntityEvent e){
+	   Player player = (Player) e.getEntity();
+	   if (e.getDamager() instanceof Snowball) {
+		   Snowball sn = (Snowball)e.getDamager();
+		   if(sn.getShooter() instanceof Player) {
+			   Player shooter = (Player)sn.getShooter();
+			   float shooterYaw = shooter.getLocation().getYaw();
+			   float shooterPitch = shooter.getLocation().getPitch();
+			   double shooterLocationX = shooter.getLocation().getX();
+			   double shooterLocationY = shooter.getLocation().getY();
+			   double shooterLocationZ = shooter.getLocation().getZ();
+			   double playerLocationX = player.getLocation().getX();
+			   double playerLocationY = player.getLocation().getY();
+			   double playerLocationZ = player.getLocation().getZ();
+			   Vector oldLookingDirection = player.getLocation().getDirection();
+			   Vector targetDirection = shooter.getLocation().getDirection();
+			   Vector newFacingDirection = (targetDirection.multiply(-1));
+			   Location location = new Location(player.getWorld(), playerLocationX, playerLocationY, playerLocationX);
+			   location.setDirection(newFacingDirection);
+			   location.setPitch(45);
+			   
+			   player.teleport(location);
+			   player.setVelocity(player.getLocation().getDirection().setY(0.9D).multiply(1.2D));
+			   
+			   
+			   
+		   }
+	   }
+   }
 
+   public void onWitherEffectDamage(EntityDamageEvent e) {
+	   if (e.getCause() == DamageCause.WITHER) {
+		   e.setCancelled(true);
+	   }
+   }
+   
    private void update() {
       Iterator var2 = this.cooldowns.entrySet().iterator();
 

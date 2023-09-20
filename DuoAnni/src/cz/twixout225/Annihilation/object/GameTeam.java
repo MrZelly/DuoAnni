@@ -21,6 +21,7 @@ public enum GameTeam {
    private List<Location> spawns;
    private Nexus nexus;
    private Annihilation plugin = Annihilation.getInstance();
+   //
    private int maxPlayers;
 
    private GameTeam() {
