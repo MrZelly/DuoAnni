@@ -1,5 +1,5 @@
 # DuoAnni by Zelly
-
+ 
 ## TODO:
 - od 60. minuty se zničí 1 život na enemy nexusu za každý kill a na obou nexusech 1 život každou minutu  <br>
 - 2 boss spawn pozicie a jedna sa vybere nahodne  <br>
