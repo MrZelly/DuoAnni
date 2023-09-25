@@ -1,5 +1,5 @@
-name: FBDuoAnni
-main: cz.twixout225.Annihilation.Annihilation
+name: DuoAnni
+main: sk.zelly.DuoAnni.Annihilation
 authors: [Twixout225]
 softdepend: [Vault]
 version: 1.0
