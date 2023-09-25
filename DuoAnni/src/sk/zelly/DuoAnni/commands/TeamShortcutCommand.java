@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.commands;
+package sk.zelly.DuoAnni.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

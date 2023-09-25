@@ -1,8 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.HashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -17,6 +14,10 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
+
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class EnderChestListener implements Listener {
    private HashMap<GameTeam, Location> enderchests = new HashMap();

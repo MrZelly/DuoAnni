@@ -1,8 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.object.Kit;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
@@ -34,6 +31,10 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.object.Kit;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class ClassAbilityListener implements Listener {
    private final HashMap<String, Location> blockLocations = new HashMap();

@@ -1,8 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.object.Boss;
 import java.util.HashMap;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
@@ -13,6 +10,10 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftIronGolem;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.IronGolem;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.object.Boss;
 
 public class BossManager {
    public HashMap<String, Boss> bosses = new HashMap();

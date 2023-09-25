@@ -1,8 +1,9 @@
-package cz.twixout225.Annihilation.api;
+package sk.zelly.DuoAnni.api;
 
-import cz.twixout225.Annihilation.object.Boss;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+
+import sk.zelly.DuoAnni.object.Boss;
 
 public class BossSpawnEvent extends Event {
    private Boss b;

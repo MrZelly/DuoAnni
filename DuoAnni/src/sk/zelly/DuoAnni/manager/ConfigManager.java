@@ -1,6 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,6 +8,8 @@ import java.io.OutputStream;
 import java.util.TreeMap;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
+
+import sk.zelly.DuoAnni.Annihilation;
 
 public class ConfigManager {
    private final TreeMap<String, ConfigManager.Configuration> configs;

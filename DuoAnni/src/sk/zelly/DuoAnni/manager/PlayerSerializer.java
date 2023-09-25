@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,6 +21,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class PlayerSerializer {
    private static Annihilation plugin;

@@ -1,8 +1,9 @@
-package cz.twixout225.Annihilation.api;
+package sk.zelly.DuoAnni.api;
 
-import cz.twixout225.Annihilation.maps.GameMap;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+
+import sk.zelly.DuoAnni.maps.GameMap;
 
 public class GameStartEvent extends Event {
    private static final HandlerList handlers = new HandlerList();

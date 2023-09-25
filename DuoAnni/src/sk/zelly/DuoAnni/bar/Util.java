@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.bar;
+package sk.zelly.DuoAnni.bar;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

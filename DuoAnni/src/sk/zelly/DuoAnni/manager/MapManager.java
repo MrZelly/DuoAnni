@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.maps.GameMap;
-import cz.twixout225.Annihilation.maps.MapLoader;
-import cz.twixout225.Annihilation.maps.VoidGenerator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -13,6 +9,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.WorldCreator;
 import org.bukkit.configuration.Configuration;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.maps.GameMap;
+import sk.zelly.DuoAnni.maps.MapLoader;
+import sk.zelly.DuoAnni.maps.VoidGenerator;
 
 public class MapManager {
    private final ArrayList<String> maps = new ArrayList();

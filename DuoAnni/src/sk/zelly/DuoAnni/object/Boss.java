@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.manager.EffectsManager;
-import cz.twixout225.Annihilation.manager.PlayerSerializer;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -18,6 +14,11 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.EnchantmentStorageMeta;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.manager.EffectsManager;
+import sk.zelly.DuoAnni.manager.PlayerSerializer;
 
 public class Boss {
    private String configName;

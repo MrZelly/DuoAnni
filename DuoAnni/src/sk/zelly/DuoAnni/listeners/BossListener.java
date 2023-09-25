@@ -1,10 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.chat.ChatUtil;
-import cz.twixout225.Annihilation.object.Boss;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
@@ -18,6 +13,12 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.chat.ChatUtil;
+import sk.zelly.DuoAnni.object.Boss;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class BossListener implements Listener {
    private Annihilation plugin;

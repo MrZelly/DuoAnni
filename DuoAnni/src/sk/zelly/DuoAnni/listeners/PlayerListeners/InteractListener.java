@@ -1,11 +1,5 @@
-package cz.twixout225.Annihilation.listeners.PlayerListeners;
+package sk.zelly.DuoAnni.listeners.PlayerListeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.object.BlockObject;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -27,6 +21,13 @@ import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.object.BlockObject;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class InteractListener implements Listener {
    private Annihilation plugin;

@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation;
+package sk.zelly.DuoAnni;
 
 import org.bukkit.ChatColor;
 

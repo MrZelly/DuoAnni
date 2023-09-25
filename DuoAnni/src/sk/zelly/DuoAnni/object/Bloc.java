@@ -1,11 +1,12 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
 
 public class Bloc {
    private static Annihilation plugin;

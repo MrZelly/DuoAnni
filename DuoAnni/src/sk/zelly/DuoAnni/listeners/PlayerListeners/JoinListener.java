@@ -1,13 +1,5 @@
-package cz.twixout225.Annihilation.listeners.PlayerListeners;
+package sk.zelly.DuoAnni.listeners.PlayerListeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.bar.ActionBar;
-import cz.twixout225.Annihilation.manager.PlayerSerializer;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.Kit;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.io.File;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
@@ -24,6 +16,15 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.bar.ActionBar;
+import sk.zelly.DuoAnni.manager.PlayerSerializer;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.Kit;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class JoinListener implements Listener {
    private Annihilation plugin;

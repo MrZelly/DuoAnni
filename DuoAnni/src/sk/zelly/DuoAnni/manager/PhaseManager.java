@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.bar.ActionBar;
-import cz.twixout225.Annihilation.chat.ChatUtil;
-import cz.twixout225.Annihilation.object.GameTeam;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,6 +8,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitScheduler;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.bar.ActionBar;
+import sk.zelly.DuoAnni.chat.ChatUtil;
+import sk.zelly.DuoAnni.object.GameTeam;
 
 public class PhaseManager {
    public long time;

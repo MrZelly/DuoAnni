@@ -1,11 +1,12 @@
-package cz.twixout225.Annihilation.commands;
+package sk.zelly.DuoAnni.commands;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
 
 public class TeamCommand implements CommandExecutor {
    private final Annihilation plugin;

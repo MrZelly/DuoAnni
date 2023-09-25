@@ -1,7 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.object.Kit;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.Arrays;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -12,6 +10,9 @@ import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
+
+import sk.zelly.DuoAnni.object.Kit;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class CraftingListener implements Listener {
    private ShapedRecipe arrowRecipe;

@@ -1,10 +1,11 @@
-package cz.twixout225.Annihilation.api;
+package sk.zelly.DuoAnni.api;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class CooldownAPI {
    public Annihilation pl;

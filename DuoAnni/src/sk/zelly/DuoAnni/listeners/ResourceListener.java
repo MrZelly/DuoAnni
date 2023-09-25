@@ -1,8 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.object.Kit;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,6 +16,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.object.Kit;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class ResourceListener implements Listener {
    public final HashMap<Material, ResourceListener.Resource> resources = new HashMap();

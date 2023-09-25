@@ -1,14 +1,15 @@
-package cz.twixout225.Annihilation.chat;
+package sk.zelly.DuoAnni.chat;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class ChatListener implements Listener {
    private final Annihilation plugin;

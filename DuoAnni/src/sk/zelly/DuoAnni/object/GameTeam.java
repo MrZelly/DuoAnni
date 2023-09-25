@@ -1,6 +1,5 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
-import cz.twixout225.Annihilation.Annihilation;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -11,6 +10,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
 
 public enum GameTeam {
    RED,

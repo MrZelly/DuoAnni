@@ -1,10 +1,11 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
-import cz.twixout225.Annihilation.Annihilation;
 import java.util.HashMap;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
 
 public class PlayerMeta {
    private static HashMap<String, PlayerMeta> metaTable = new HashMap();

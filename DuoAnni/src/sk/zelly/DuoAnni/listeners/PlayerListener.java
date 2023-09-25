@@ -1,17 +1,18 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.chat.ChatUtil;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.Kit;
-import cz.twixout225.Annihilation.object.PlayerMeta;
-import cz.twixout225.Annihilation.stats.StatType;
 import java.util.ArrayList;
 import net.minecraft.server.v1_8_R3.EntityPlayer;
 import net.minecraft.server.v1_8_R3.PacketPlayInClientCommand;
 import net.minecraft.server.v1_8_R3.PacketPlayInClientCommand.EnumClientCommand;
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.chat.ChatUtil;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.Kit;
+import sk.zelly.DuoAnni.object.PlayerMeta;
+import sk.zelly.DuoAnni.stats.StatType;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

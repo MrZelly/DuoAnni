@@ -1,10 +1,5 @@
-package cz.twixout225.Annihilation.listeners.PlayerListeners;
+package sk.zelly.DuoAnni.listeners.PlayerListeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.manager.PlayerSerializer;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.io.File;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -20,6 +15,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.manager.PlayerSerializer;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class QuitListener implements Listener {
    private Annihilation plugin;

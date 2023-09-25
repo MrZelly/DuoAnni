@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.stats;
+package sk.zelly.DuoAnni.stats;
 
 public enum StatType {
    KILLS("KILLS", 0, "KILLS", 0),

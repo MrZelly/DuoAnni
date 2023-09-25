@@ -1,6 +1,5 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
-import cz.twixout225.Annihilation.listeners.SoulboundListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,6 +16,8 @@ import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionType;
+
+import sk.zelly.DuoAnni.listeners.SoulboundListener;
 
 public enum Kit {
    CIVILIAN(Material.WORKBENCH) {

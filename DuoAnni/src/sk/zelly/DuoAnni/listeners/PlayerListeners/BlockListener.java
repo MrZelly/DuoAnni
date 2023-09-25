@@ -1,16 +1,18 @@
-package cz.twixout225.Annihilation.listeners.PlayerListeners;
+package sk.zelly.DuoAnni.listeners.PlayerListeners;
 
 import com.google.common.collect.Maps;
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.api.NexusDamageEvent;
-import cz.twixout225.Annihilation.api.NexusDestroyEvent;
-import cz.twixout225.Annihilation.chat.ChatUtil;
-import cz.twixout225.Annihilation.object.BlockObject;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
-import cz.twixout225.Annihilation.stats.StatType;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.api.NexusDamageEvent;
+import sk.zelly.DuoAnni.api.NexusDestroyEvent;
+import sk.zelly.DuoAnni.chat.ChatUtil;
+import sk.zelly.DuoAnni.object.BlockObject;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
+import sk.zelly.DuoAnni.stats.StatType;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Random;

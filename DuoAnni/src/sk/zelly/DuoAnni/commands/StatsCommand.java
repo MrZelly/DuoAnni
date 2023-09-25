@@ -1,8 +1,5 @@
-package cz.twixout225.Annihilation.commands;
+package sk.zelly.DuoAnni.commands;
 
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.stats.StatType;
-import cz.twixout225.Annihilation.stats.StatsManager;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -13,6 +10,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.stats.StatType;
+import sk.zelly.DuoAnni.stats.StatsManager;
 
 public class StatsCommand implements CommandExecutor {
    private StatsManager manager;

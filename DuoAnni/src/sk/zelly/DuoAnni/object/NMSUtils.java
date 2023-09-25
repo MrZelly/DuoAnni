@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

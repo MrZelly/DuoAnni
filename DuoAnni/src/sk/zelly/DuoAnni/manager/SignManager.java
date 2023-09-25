@@ -1,8 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.object.GameTeam;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -13,6 +10,10 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.configuration.ConfigurationSection;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.object.GameTeam;
 
 public class SignManager {
    private HashMap<GameTeam, ArrayList<Location>> signs = new HashMap();

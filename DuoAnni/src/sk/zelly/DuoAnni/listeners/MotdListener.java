@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.manager.PhaseManager;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,6 +7,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerListPingEvent;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.manager.PhaseManager;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class MotdListener implements Listener {
    private Annihilation plugin;

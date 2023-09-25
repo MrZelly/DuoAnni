@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.object;
+package sk.zelly.DuoAnni.object;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

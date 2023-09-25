@@ -1,6 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.object.GameTeam;
 import java.util.HashMap;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
@@ -10,6 +9,8 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
+
+import sk.zelly.DuoAnni.object.GameTeam;
 
 public class ScoreboardManager {
    public HashMap<String, Score> scores = new HashMap();

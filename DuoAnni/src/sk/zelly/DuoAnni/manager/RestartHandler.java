@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.bar.ActionBar;
-import cz.twixout225.Annihilation.object.GameTeam;
 import java.util.Iterator;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,6 +8,11 @@ import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.bar.ActionBar;
+import sk.zelly.DuoAnni.object.GameTeam;
 
 public class RestartHandler {
    private final Annihilation plugin;

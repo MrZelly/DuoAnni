@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.manager;
+package sk.zelly.DuoAnni.manager;
 
 import java.lang.reflect.Field;
 

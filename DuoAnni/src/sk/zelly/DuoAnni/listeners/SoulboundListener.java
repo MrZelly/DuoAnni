@@ -1,6 +1,5 @@
-package cz.twixout225.Annihilation.listeners;
+package sk.zelly.DuoAnni.listeners;
 
-import cz.twixout225.Annihilation.manager.SoundManager;
 import java.util.Arrays;
 import java.util.Iterator;
 import org.bukkit.ChatColor;
@@ -15,6 +14,8 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import sk.zelly.DuoAnni.manager.SoundManager;
 
 public class SoulboundListener implements Listener {
    private static final String soulboundTag;

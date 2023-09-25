@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation;
+package sk.zelly.DuoAnni;
 
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.permission.Permission;

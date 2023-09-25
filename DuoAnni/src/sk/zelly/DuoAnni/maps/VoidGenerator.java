@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.maps;
+package sk.zelly.DuoAnni.maps;
 
 import java.util.Random;
 import org.bukkit.Location;

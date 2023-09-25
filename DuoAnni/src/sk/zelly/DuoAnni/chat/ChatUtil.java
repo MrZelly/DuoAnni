@@ -1,17 +1,18 @@
-package cz.twixout225.Annihilation.chat;
+package sk.zelly.DuoAnni.chat;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Util;
-import cz.twixout225.Annihilation.VaultHooks;
-import cz.twixout225.Annihilation.object.Boss;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.PlayerMeta;
-import cz.twixout225.Annihilation.stats.StatType;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Util;
+import sk.zelly.DuoAnni.VaultHooks;
+import sk.zelly.DuoAnni.object.Boss;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.PlayerMeta;
+import sk.zelly.DuoAnni.stats.StatType;
 
 public class ChatUtil {
    private static final String DARK_AQUA;

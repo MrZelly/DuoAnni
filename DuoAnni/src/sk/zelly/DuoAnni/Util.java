@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation;
+package sk.zelly.DuoAnni;
 
-import cz.twixout225.Annihilation.object.BlockObject;
-import cz.twixout225.Annihilation.object.GameTeam;
-import cz.twixout225.Annihilation.object.Kit;
-import cz.twixout225.Annihilation.object.PlayerMeta;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -38,6 +34,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.Attachable;
 import org.bukkit.material.MaterialData;
 import org.bukkit.util.BlockIterator;
+
+import sk.zelly.DuoAnni.object.BlockObject;
+import sk.zelly.DuoAnni.object.GameTeam;
+import sk.zelly.DuoAnni.object.Kit;
+import sk.zelly.DuoAnni.object.PlayerMeta;
 
 public class Util {
    public static HashMap<Player, Boolean> firstKit = new HashMap();

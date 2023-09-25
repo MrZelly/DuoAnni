@@ -1,9 +1,5 @@
-package cz.twixout225.Annihilation.commands;
+package sk.zelly.DuoAnni.commands;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.maps.MapLoader;
-import cz.twixout225.Annihilation.maps.VoidGenerator;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -13,6 +9,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.maps.MapLoader;
+import sk.zelly.DuoAnni.maps.VoidGenerator;
 
 public class MapCommand implements CommandExecutor {
    private MapLoader loader;

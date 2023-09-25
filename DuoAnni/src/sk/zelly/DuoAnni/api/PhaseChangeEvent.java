@@ -1,4 +1,4 @@
-package cz.twixout225.Annihilation.api;
+package sk.zelly.DuoAnni.api;
 
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;

@@ -1,13 +1,14 @@
-package cz.twixout225.Annihilation.commands;
+package sk.zelly.DuoAnni.commands;
 
-import cz.twixout225.Annihilation.Translator;
-import cz.twixout225.Annihilation.manager.VotingManager;
 import java.util.Iterator;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Translator;
+import sk.zelly.DuoAnni.manager.VotingManager;
 
 public class VoteCommand implements CommandExecutor {
    private final VotingManager manager;

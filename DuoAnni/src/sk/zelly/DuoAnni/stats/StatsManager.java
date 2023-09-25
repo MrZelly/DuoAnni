@@ -1,10 +1,11 @@
-package cz.twixout225.Annihilation.stats;
+package sk.zelly.DuoAnni.stats;
 
-import cz.twixout225.Annihilation.Annihilation;
-import cz.twixout225.Annihilation.manager.ConfigManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.bukkit.entity.Player;
+
+import sk.zelly.DuoAnni.Annihilation;
+import sk.zelly.DuoAnni.manager.ConfigManager;
 
 public class StatsManager {
    public static final int UNDEF_STAT = -42;
